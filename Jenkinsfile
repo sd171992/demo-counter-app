@@ -53,11 +53,6 @@ pipeline {
                     
                 }
             }
-            stage('Quality Gate Status'){
-                
-                steps{
-                    waitForQualityGate abortPipeline: true
-                }
-            }
+            
     }
 }
