@@ -1,0 +1,19 @@
+{
+    "jenkins-runner.jobs": {
+        "gitops-argocd_CI": {
+            "isDefault": true,
+            "runWith": "jenkins-master",
+            "name": "Demoapplication"
+    }
+   },
+   "jenkins-runner.hostConfigs": {
+    "jenkins-master": {
+        "url": "http://54.226.30.246:8080/",
+        "user": "sumitsp",
+        "password": "@123",
+        "useCrumbIssuer": true,
+    }
+   }
+}
+
+//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
