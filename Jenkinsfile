@@ -14,12 +14,12 @@ pipeline {
 
     stages{
         
-         stage('git Checkout'){
-             steps{
-                 script{
-                     git branch: 'main', url: 'https://github.com/sd171992/demo-counter-app.git'
-                 }
-             }
+//          stage('git Checkout'){
+//              steps{
+//                  script{
+//                      git branch: 'main', url: 'https://github.com/sd171992/demo-counter-app.git'
+//                  }
+//              }
             stage('eks connect'){
             steps{
 
@@ -63,4 +63,3 @@ pipeline {
             // }
         }
     }
-}
