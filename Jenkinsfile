@@ -35,31 +35,31 @@ pipeline {
 
                 }
             }
-            // stage('eks deployment'){
-            //     when { expression { params.action == 'create'}}
-            //     steps{
+            stage('eks deployment'){
+                when { expression { params.action == 'create'}}
+                steps{
 
-            //         script{
+                    script{
 
-            //             def apply = false
-            //             try{
+                        def apply = false
+                        try{
 
-            //                 input message: 'please confirm the apply to initiate the deployment', ok: 'Ready to apply confir'
-            //                 apply = true
-            //             }
-            //             catch(err){
-            //                 apply = false
-            //                 CurrentBuild.result= 'UNSTABLE'
-            //             }
-            //             if(apply){
+                            input message: 'please confirm the apply to initiate the deployment', ok: 'Ready to apply confir'
+                            apply = true
+                        }
+                        catch(err){
+                            apply = false
+                            CurrentBuild.result= 'UNSTABLE'
+                        }
+                        if(apply){
 
-            //                 sh """
-            //                 kubectl apply -f .
-            //                 """
+                            sh """
+                            kubectl apply -f .
+                            """
 
-            //             }
-            //         }
-            //     }
-            // }
+                        }
+                    }
+                }
+            }
         }
     }
