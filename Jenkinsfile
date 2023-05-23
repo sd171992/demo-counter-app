@@ -11,7 +11,6 @@ pipeline {
         ACCESS_KEY = credentials('aws_access_key_id')
         SECRET_KEY = credentials('aws_secret_access_key_id')
     }
-    }
 
     stages{
         stage('Git Checkout'){
@@ -62,4 +61,5 @@ pipeline {
             //     }
             // }
         }
-    }        
+    }
+}
